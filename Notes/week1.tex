@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+
+% Basic packages
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+% Title information
+\title{Notes}
+\author{Martin}
+\date{\today}
+
+% Custom commands for quick note-taking
+\newcommand{\todo}[1]{\textbf{TODO: #1}}
+\newcommand{\note}[1]{\textit{Note: #1}}
+\newcommand{\important}[1]{\underline{#1}}
+
+\begin{document}
+
+\maketitle
+
+\section{Structures and thermal}
+% Quick notes go here
+Ch14 P401
+\begin{enumerate}
+    \item The structure will mainly support payload during launch and a stable platform for measurements
+    \item Optical payloads require clean environments
+\end{enumerate}
+Ch14 P417
+\begin{enumerate}
+    \item Spacecraft natural frequencies must be separate from launch vehicle ones.
+    \item Load isolation systems have become more common in recent years. Flexures/Dampers
+    \item Solar panel shock loads are a concern
+    \item For precision pointing instruments, graphite composites do not change size over temperature. "Effective optical bench structure uses graphite-composite face-sehets over an aluminium honeycomb core". light and does not change over tempreature.
+\end{enumerate}
+Ch22 P663
+P668 basically tells me cad
+\begin{enumerate}
+    \item Make sure each componenet can be assembled nicely to each other
+    \item Make sure everything is within fairing
+    \item Model FOV of cameras and sensors, and CG
+    \item CG limits
+\end{enumerate}
+CH22 P668
+15\% to 20\% of the mass of the spacecraft is the structure. 
+Load analysis can only really be done later on, to look at sinusoidal loading, quasistatic loading, and random loading.
+
+\section{Micrometeorites}
+Bumper sizing
+\begin{equation}
+    t_b = c_b d \frac{\rho_p}{\rho_b}
+\end{equation}
+Where
+\begin{itemize}
+    \item $c_b = $ coefficient 0.25 when S/d < 30, $c_b$ = 0.2 when above
+    \item $d$ projeoctile diameter (cm)
+    \item $\rho_p$ = projectile density (g/cm$^3$)
+    \item $\rho_b$ = bumper density (g/cm$^3$)
+    \item $S$ = spacing between outer and rear wall (cm)
+    \item $t_b$ = bumper thickness (cm)
+\end{itemize}
+
+
+Rear wall sizing
+
+\begin{equation}
+    t_w = c_w d^{0.5} (\rho_b \rho_p)^{\frac{1}{6}}(M_p)^{\frac{1}{3}}\frac{V_n}{S^{0.5}}(\frac{70}{\sigma})^{0.5}
+\end{equation}
+Where
+\begin{itemize}
+    \item $c_w$ = 0.16 cm$^2$-sec (g$^2/3$ km)
+    \item $d$ = projectile diameter (cm)
+    \item $M_p$ = projectile mass (g)
+    \item $\rho_p$ = projectile density (g/cm$^3$)
+    \item $\rho_b$ = bumper density (g/cm$^3$)
+    \item $S$ = spacing between outer and rear wall (cm)
+    \item $\sigma$ = yield strength of rear wall material (ksi)
+    \item $t_w$ = rear wall thickness (cm)
+    \item $V_n$ = normal velocity of projectile (km/sec)
+\end{itemize}
+
+\end{document}
